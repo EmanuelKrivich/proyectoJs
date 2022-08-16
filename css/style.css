@@ -1,0 +1,114 @@
+.header {
+    background-color: rgb(89, 61, 59);
+
+}
+
+
+.navbar a {
+    color: antiquewhite;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+}
+
+.btn-outline-success {
+    color: antiquewhite;
+    border-color: #6c757d;
+}
+
+.btn-outline-success:hover {
+    color: #6c757d;
+}
+
+.btn-outline-success:active {
+    color: #6c757d;
+}
+
+
+.subtitulo {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.imgInicio {
+    height: 40rem;
+}
+
+.contenidoPrincipal {
+    background-color: rgb(89, 61, 59);
+}
+
+.container {
+    color: antiquewhite;
+}
+
+
+.contenidoPrincipal p {
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.footer {
+    background-color: rgb(89, 61, 59);
+    justify-content: center;
+    height: 15vh;
+    align-items: center;
+
+}
+
+.footer i {
+    font-size: 2rem;
+    color: antiquewhite;
+    margin-left: 1rem;
+}
+
+.generos img {
+    width: 20rem;
+}
+
+.generos img:hover {
+    filter: blur(2px);
+    transition: .5s;
+}
+
+.generos p {
+    margin-right: 5.5rem;
+}
+
+.formulario {
+    background-color: rgb(89, 61, 59);
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario button {
+    color: antiquewhite;
+}
+
+.imgContacto {
+    width: 30rem;
+
+}
+
+.imgContacto:hover {
+    filter: blur(2px);
+    transition: .5s;
+}
+
+.botonOfertas {
+    margin-bottom: 1rem;
+    margin-left: 7.5rem;
+}
+
+.accordion {
+    --bs-accordion-color: antiquewhite;
+    --bs-accordion-bg: rgb(89, 61, 59);
+}
+
+.accordion-button{
+    color: antiquewhite;
+}
