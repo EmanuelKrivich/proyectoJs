@@ -7,6 +7,7 @@ let btnClasico = document.getElementById('btnClasico');
 let btnBuscar = document.getElementById('btnBuscar');
 let inputBuscar = document.getElementById('inputBuscar');
 
+
 btnRock.onclick = () => {
 
     document.querySelector("#imgRock").style.display = "none";
