@@ -1,31 +1,27 @@
-
 // REGISTRO
-
-
-
 let btnRegistro = document.getElementById('btnRegistro');
-let headerIndex = document.getElementById('headerIndex');
+let formularioRegistro = document.getElementById('formularioRegistro');
 
 let usuario = localStorage.getItem('usuario');
 
+const registroUsuario = () => {
 if (usuario) {
-    let titulo = document.getElementById('titulo');
-    titulo.innerText = `¡Bienvenido ${usuario}`;
-    document.body.appendChild(titulo);
+    formularioRegistro.innerText = `¡Bienvenido ${usuario}!`;
+
 } else {
     btnRegistro.onclick = () => {
-let usuario = document.getElementById('inputUsuario').value;
-let clave = document.getElementById('inputClave').value; 
+        let usuario = document.getElementById('inputUsuario').value;
+        let clave = document.getElementById('inputClave').value;
 
-localStorage.setItem("usuario", usuario);
-localStorage.setItem("clave", clave);
-}
+        localStorage.setItem("usuario", usuario);
+        localStorage.setItem("clave", clave);
 
- 
-
-
-
-
+    }
 
 }
 
+
+
+
+
+}

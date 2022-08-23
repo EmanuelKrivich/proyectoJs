@@ -113,8 +113,10 @@
     color: antiquewhite;
 }
 
-#titulo {
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
+#formularioRegistro {
+    display: flex;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
     color: antiquewhite;
 }
+
