@@ -112,3 +112,9 @@
 .accordion-button{
     color: antiquewhite;
 }
+
+#titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: antiquewhite;
+}

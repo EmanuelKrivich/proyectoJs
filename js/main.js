@@ -58,20 +58,23 @@ const mostrarLista = (btn, idBtn, idImg, tituloH5, array) => {
         h5.innerHTML = tituloH5;
         document.body.appendChild(h5);
 
+        let ul = document.createElement("ul");
+        ul.innerHTML = '';
+        document.body.appendChild(ul);
+
         for (index = 0; index < rock.length; index++) {
-            let ul = document.createElement("ul");
-            ul.innerHTML = `<li>${array[index].artista} - ${array[index].disco}</li>`;
+            ul.innerHTML += `<li>${array[index].artista} - ${array[index].disco}</li>`;
             document.body.appendChild(ul);
         }
     }
 }
 
-mostrarLista (btnRock, "#btnRock", "#imgRock", "Rock", rock);
-mostrarLista (btnSoul, "#btnSoul", "#imgSoul", "Soul", soul);
-mostrarLista (btnJazz, "#btnJazz", "#imgJazz", "Jazz", jazz);
-mostrarLista (btnDisco, "#btnDisco", "#imgDisco", "Disco", disco);
-mostrarLista (btnBlues, "#btnBlues", "#imgBlues", "Blues", blues);
-mostrarLista (btnClasico, "#btnClasico", "#imgClasico", "Clasico", clasico);
+mostrarLista(btnRock, "#btnRock", "#imgRock", "Rock", rock);
+mostrarLista(btnSoul, "#btnSoul", "#imgSoul", "Soul", soul);
+mostrarLista(btnJazz, "#btnJazz", "#imgJazz", "Jazz", jazz);
+mostrarLista(btnDisco, "#btnDisco", "#imgDisco", "Disco", disco);
+mostrarLista(btnBlues, "#btnBlues", "#imgBlues", "Blues", blues);
+mostrarLista(btnClasico, "#btnClasico", "#imgClasico", "Clasico", clasico);
 
 
 
