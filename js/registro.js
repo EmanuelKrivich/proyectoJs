@@ -4,7 +4,7 @@ let formularioRegistro = document.getElementById('formularioRegistro');
 
 let usuario = localStorage.getItem('usuario');
 
-const registroUsuario = () => {
+
 if (usuario) {
     formularioRegistro.innerText = `¡Bienvenido ${usuario}!`;
 
@@ -18,7 +18,7 @@ if (usuario) {
 
     }
 
-}
+
 
 
 

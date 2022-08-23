@@ -49,32 +49,63 @@ let btnDisco = document.getElementById('btnDisco');
 let btnClasico = document.getElementById('btnClasico');
 
 
-const mostrarLista = (btn, idBtn, idImg, tituloH5, array) => {
+
+// const mostrarLista = (btn, idBtn, idImg, tituloH5, array, seccion) => {
+//     btn.onclick = () => {
+//         document.querySelector(idBtn).style.display = "none";
+//         document.querySelector(idImg).style.display = "none";
+
+//         let h5 = document.createElement("h5");
+//         h5.innerHTML = tituloH5;
+//         document.body.appendChild(h5);
+
+//         let ul = document.createElement("ul");
+//         ul.innerHTML = '';
+//         document.body.appendChild(ul);
+
+//         for (index = 0; index < rock.length; index++) {
+//             ul.innerHTML += `<li>${array[index].artista} - ${array[index].disco}</li>`;
+//             document.body.appendChild(ul);
+//         }
+//     }
+     
+     
+// }
+
+const mostrarLista = (btn, idBtn, idImg, tituloH5, array, seccion) => {
     btn.onclick = () => {
         document.querySelector(idBtn).style.display = "none";
         document.querySelector(idImg).style.display = "none";
 
-        let h5 = document.createElement("h5");
-        h5.innerHTML = tituloH5;
-        document.body.appendChild(h5);
+        seccion.innerHTML = `<h5>${tituloH5}</h5>`
+        array.forEach(objeto => {
+            seccion.innerHTML += `<li>${objeto.artista} - ${objeto.disco}</li>`;
+        });
+        
 
-        let ul = document.createElement("ul");
-        ul.innerHTML = '';
-        document.body.appendChild(ul);
+        // let h5 = document.createElement("h5");
+        // h5.innerHTML = tituloH5;
+        // document.body.appendChild(h5);
 
-        for (index = 0; index < rock.length; index++) {
-            ul.innerHTML += `<li>${array[index].artista} - ${array[index].disco}</li>`;
-            document.body.appendChild(ul);
-        }
+        // let ul = document.createElement("ul");
+        // ul.innerHTML = '';
+        // document.body.appendChild(ul);
+
+        // for (index = 0; index < rock.length; index++) {
+        //     ul.innerHTML += `<li>${array[index].artista} - ${array[index].disco}</li>`;
+        //     document.body.appendChild(ul);
+        // }
     }
+     
+     
 }
 
-mostrarLista(btnRock, "#btnRock", "#imgRock", "Rock", rock);
-mostrarLista(btnSoul, "#btnSoul", "#imgSoul", "Soul", soul);
-mostrarLista(btnJazz, "#btnJazz", "#imgJazz", "Jazz", jazz);
-mostrarLista(btnDisco, "#btnDisco", "#imgDisco", "Disco", disco);
-mostrarLista(btnBlues, "#btnBlues", "#imgBlues", "Blues", blues);
-mostrarLista(btnClasico, "#btnClasico", "#imgClasico", "Clasico", clasico);
+mostrarLista(btnRock, "#btnRock", "#imgRock", "Rock", rock, seccionRock);
+mostrarLista(btnSoul, "#btnSoul", "#imgSoul", "Soul", soul, seccionSoul);
+mostrarLista(btnJazz, "#btnJazz", "#imgJazz", "Jazz", jazz, seccionJazz);
+mostrarLista(btnDisco, "#btnDisco", "#imgDisco", "Disco", disco, seccionDisco);
+mostrarLista(btnBlues, "#btnBlues", "#imgBlues", "Blues", blues, seccionBlues);
+mostrarLista(btnClasico, "#btnClasico", "#imgClasico", "Clasico", clasico, seccionClasico);
 
 
 
