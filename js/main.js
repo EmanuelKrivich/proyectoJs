@@ -41,6 +41,8 @@ clasico.push(new Discos("Christina Pluhar", "Clasico", "La Tarantella: Antidotum
 clasico.push(new Discos("Juan Diego Flórez", "Clasico", "Mozart", 3800));
 
 
+
+// FUNCION PARA MOSTRAR LISTA DE DISCOS EN LUGAR DE IMAGEN
 let btnRock = document.getElementById('btnRock');
 let btnJazz = document.getElementById('btnJazz');
 let btnBlues = document.getElementById('btnBlues');
@@ -49,52 +51,15 @@ let btnDisco = document.getElementById('btnDisco');
 let btnClasico = document.getElementById('btnClasico');
 
 
-
-// const mostrarLista = (btn, idBtn, idImg, tituloH5, array, seccion) => {
-//     btn.onclick = () => {
-//         document.querySelector(idBtn).style.display = "none";
-//         document.querySelector(idImg).style.display = "none";
-
-//         let h5 = document.createElement("h5");
-//         h5.innerHTML = tituloH5;
-//         document.body.appendChild(h5);
-
-//         let ul = document.createElement("ul");
-//         ul.innerHTML = '';
-//         document.body.appendChild(ul);
-
-//         for (index = 0; index < rock.length; index++) {
-//             ul.innerHTML += `<li>${array[index].artista} - ${array[index].disco}</li>`;
-//             document.body.appendChild(ul);
-//         }
-//     }
-     
-     
-// }
-
 const mostrarLista = (btn, idBtn, idImg, tituloH5, array, seccion) => {
     btn.onclick = () => {
         document.querySelector(idBtn).style.display = "none";
         document.querySelector(idImg).style.display = "none";
 
-        seccion.innerHTML = `<h5>${tituloH5}</h5>`
+        seccion.innerHTML = `<h5>${tituloH5}</h5>`;
         array.forEach(objeto => {
-            seccion.innerHTML += `<li>${objeto.artista} - ${objeto.disco}</li>`;
+            seccion.innerHTML += `<li>${objeto.artista} - ${objeto.disco}</li> - $${objeto.precio}`;
         });
-        
-
-        // let h5 = document.createElement("h5");
-        // h5.innerHTML = tituloH5;
-        // document.body.appendChild(h5);
-
-        // let ul = document.createElement("ul");
-        // ul.innerHTML = '';
-        // document.body.appendChild(ul);
-
-        // for (index = 0; index < rock.length; index++) {
-        //     ul.innerHTML += `<li>${array[index].artista} - ${array[index].disco}</li>`;
-        //     document.body.appendChild(ul);
-        // }
     }
      
      

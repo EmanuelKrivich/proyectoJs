@@ -1,4 +1,5 @@
-// REGISTRO
+// REGISTRO DE USUARIO Y MOSTRAR EN HEADER
+
 let btnRegistro = document.getElementById('btnRegistro');
 let formularioRegistro = document.getElementById('formularioRegistro');
 
@@ -17,11 +18,4 @@ if (usuario) {
         localStorage.setItem("clave", clave);
 
     }
-
-
-
-
-
-
-
 }
