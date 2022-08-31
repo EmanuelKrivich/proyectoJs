@@ -7,16 +7,8 @@ Toastify({
     offset: {
         y: 100
     },
+    
     onClick: () => {
-        
-        mostrarSeleccion = () =>{
-            return new Promise ((resolve) => {
-                if (discoOferta) {
-                    resolve ();
-            Swal.fire(`You selected: ${discoOferta}`)
-          }
-            })
-          }
 
         const { value: discoOferta } = Swal.fire({
             title: 'Seleccione uno de los siguientes discos',
@@ -42,7 +34,7 @@ Toastify({
             }
           })
           
-          mostrarSeleccion ();
+        
           
     }
 
