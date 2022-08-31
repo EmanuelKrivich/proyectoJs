@@ -1,7 +1,68 @@
+
+
+Toastify({
+
+    text: "¡25% en discos de Soul!",
+    duration: 5000,
+    offset: {
+        y: 100
+    },
+    onClick: () => {
+        
+        mostrarSeleccion = () =>{
+            return new Promise ((resolve) => {
+                if (discoOferta) {
+                    resolve ();
+            Swal.fire(`You selected: ${discoOferta}`)
+          }
+            })
+          }
+
+        const { value: discoOferta } = Swal.fire({
+            title: 'Seleccione uno de los siguientes discos',
+            input: 'select',
+            inputOptions: {
+              'Soul': {
+                stevieWonder: 'Stevie Wonder - Innervisions',
+                laurynHill: 'Lauryn Hill - The Miseducation of Lauryn Hill',
+                marvinGaye: 'Marvin Gaye - Lets get it on',
+                samCooke: 'Sam Cooke - Mr. Soul'
+              },
+            },
+            inputPlaceholder: 'Seleccione un disco',
+            showCancelButton: true,
+            inputValidator: (value) => {
+              return new Promise((resolve) => {
+                if (value != '') {
+                  resolve()
+                } else {
+                  resolve('Seleccione un disco')
+                }
+              })
+            }
+          })
+          
+          mostrarSeleccion ();
+          
+    }
+
+    }).showToast();
+
+
+
+
+
+
+
+
+
+
+
+
+
 // FUNCION PARA REALIZAR DESCUENTO AL PRECIO
 // function descuento() {
 //     let precioDescontado = (valor - ((valor * 25) / 100));
-//     alert("Con el descuento usted abonará: $" + precioDescontado);
 // }
 
 
@@ -62,3 +123,6 @@
 //         bienvenida = prompt("Vuelva a ingresar un género entre Rock, Soul o Jazz, o presione s para recibir una oferta limitada. Presione n para salir.")
 //     }
 // }
+
+
+
