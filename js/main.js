@@ -58,7 +58,7 @@ const mostrarLista = (btn, idBtn, idImg, tituloH5, array, seccion) => {
 
         seccion.innerHTML = `<h5>${tituloH5}</h5>`;
         array.forEach(objeto => {
-            seccion.innerHTML += `<li>${objeto.artista} - ${objeto.disco}</li> - $${objeto.precio} - <button> Agregar al carrito</button>`;
+            seccion.innerHTML += `<li>${objeto.artista} - ${objeto.disco}</li> - $${objeto.precio} - <button>Agregar al carrito</button>`;
         });
     }
      
@@ -73,5 +73,4 @@ mostrarLista(btnBlues, "#btnBlues", "#imgBlues", "Blues", blues, seccionBlues);
 mostrarLista(btnClasico, "#btnClasico", "#imgClasico", "Clasico", clasico, seccionClasico);
 
 
-
- 
+const carrito = [];

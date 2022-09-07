@@ -1,0 +1,9 @@
+[
+    {"artista": "Pink Floyd", "genero": "Rock", "album": "The Dark Side of the Moon", "año": "1979", "precio": 4500},
+    {"artista": "Marvin Gaye", "genero": "Soul", "album": "Lets get it on", "año": "1973", "precio": 4000},
+    {"artista": "Miles Davis", "genero": "Jazz", "album": "Kind Of Blue", "año": "1959", "precio": 4200},
+    {"artista": "Dire Straits", "genero": "Rock", "album": "Brotheres In Arms", "año": 1985, "precio": 3800},
+    {"artista": "Michael Jackson", "genero": "Pop", "album": "Thriller", "año": "1982", "precio": 4500},
+    {"artista": "Queen", "genero": "Rock", "album": "Innuendo", "año": "1991", "precio": 4200}
+]
+
