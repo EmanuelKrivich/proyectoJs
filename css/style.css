@@ -136,3 +136,11 @@
 #seccionRock {
     min-height: 528px;
 }
+
+#btnCarrito {
+    margin-right:  300px;
+}
+
+.carrito {
+    width: 32px;
+}

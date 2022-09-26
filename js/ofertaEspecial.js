@@ -1,4 +1,5 @@
 
+
 Toastify({
 
     text: "¡Histórico de la semana!",
@@ -9,8 +10,8 @@ Toastify({
     
     onClick: () => {
         Swal.fire({
-            title: 'Michael Jackson - Thriller',
-            text: '$3000',
+            title: `${productos[11].artista} - ${productos[11].album}`,
+            text: `$${productos[11].precio}`,
             imageUrl: 'https://m.media-amazon.com/images/I/51vnfQPXskL.jpg',
             imageWidth: 400,
             imageHeight: 400,
@@ -20,6 +21,8 @@ Toastify({
             cancelButtonText: 'Cancelar'
           }) .then((result) => {
             if (result.isConfirmed) {
+              const item = productos[11];
+              carrito.push(item);
               Swal.fire(
                 'Agregado al carrito!',
                 '',
@@ -32,6 +35,40 @@ Toastify({
     }
 
 }).showToast();
+
+let btnUno = document.getElementById('btnUno');
+let btnDos = document.getElementById('btnDos');
+let btnTres = document.getElementById('btnTres');
+let btnCuatro = document.getElementById('btnCuatro');
+let btnCinco = document.getElementById('btnCinco');
+let btnSeis = document.getElementById('btnSeis');
+
+
+
+
+const mostrarInfoAlbum = (btn, objeto) => {
+    btn.onclick = () => {
+      fetch('/data.json')
+        .then(response => response.json())
+        .then(data => {
+              Swal.fire(
+                `${data[objeto].artista} - ${data[objeto].album} - ${data[objeto].año}`,
+                `${data[objeto].info}`
+                
+              );
+            
+        })
+      
+    }
+}
+
+
+mostrarInfoAlbum(btnUno, 0);
+mostrarInfoAlbum(btnDos, 1);
+mostrarInfoAlbum(btnTres, 2);
+mostrarInfoAlbum(btnCuatro, 3);
+mostrarInfoAlbum(btnCinco, 4);
+mostrarInfoAlbum(btnSeis, 5);
 
 
 const mostrarListaCanciones = (img,idImg,array,seccion) => {
